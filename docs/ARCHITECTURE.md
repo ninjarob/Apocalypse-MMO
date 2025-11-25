@@ -13,22 +13,33 @@ The Apocalypse MMO is built as a distributed system with clear separation betwee
 │                                                            │
 │  ┌──────────────────┐              ┌──────────────────┐    │
 │  │  Unreal Client   │◄────────────►│  Game Server     │    │
-│  │  (UE5)           │   WebSocket  │  (Node.js/C++)   │    │
-│  │                  │   or Native  │                  │    │
+│  │  (UE5)           │   WebSocket  │  (Node.js)       │    │
+│  │                  │              │                  │    │
 │  │  - Rendering     │              │  - Game Logic    │    │
 │  │  - Input         │              │  - Authority     │    │
 │  │  - Prediction    │              │  - Validation    │    │
-│  │  - UI/UX         │              │  - Persistence   │    │
+│  │  - UI/UX         │              │  - Mod System    │    │
+│  │  - Blueprints    │              │  - Persistence   │    │
 │  └──────────────────┘              └─────────┬────────┘    │
-│                                              │             │
-│                                    ┌─────────▼────────┐    │
-│                                    │   Database       │    │
-│                                    │   (SQLite/PG)    │    │
-│                                    │                  │    │
-│                                    │  - Characters    │    │
-│                                    │  - World State   │    │
-│                                    │  - Items         │    │
-│                                    └──────────────────┘    │
+│          │                                   │             │
+│          │                         ┌─────────▼────────┐    │
+│          │                         │   Database       │    │
+│          │                         │   (SQLite/PG)    │    │
+│          │                         │                  │    │
+│          │                         │  - Characters    │    │
+│          │                         │  - World State   │    │
+│          │                         │  - Items         │    │
+│          │                         └──────────────────┘    │
+│          │                                                 │
+│          └──────────┐                                      │
+│                     ▼                                      │
+│           ┌────────────────────┐                          │
+│           │  Data Files (JSON) │                          │
+│           │  ← MODDABLE        │                          │
+│           │  - items.json      │                          │
+│           │  - npcs.json       │                          │
+│           │  - quests.json     │                          │
+│           └────────────────────┘                          │
 │                                                            │
 └────────────────────────────────────────────────────────────┘
 ```

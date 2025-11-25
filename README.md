@@ -23,14 +23,23 @@ This is a **documentation and planning repository**. The actual code is split ac
 - **Graphics:** Full 3D with modern rendering
 
 ### Server
-- **Language:** Node.js with TypeScript (or C++ if performance demands)
-- **Database:** SQLite/PostgreSQL
-- **Networking:** WebSockets / Unreal's native replication
+- **Language:** Node.js with TypeScript
+- **Database:** SQLite (development) / PostgreSQL (production)
+- **Networking:** WebSockets for real-time communication
+- **Moddability:** JavaScript-based mod system with hot-reload
 
 ### Data Pipeline
 - MUD data extraction and parsing
 - Automated conversion to 3D-compatible formats
 - Asset generation tools
+- Data-driven design (JSON/CSV for all content)
+
+## Design Principles
+
+- **Moddability First:** Built to be easily extensible by the community
+- **Data-Driven:** Game content defined in JSON/CSV, not hardcoded
+- **Rapid Iteration:** Fast development and testing cycles
+- **Performance Second:** Optimize after gameplay is fun
 
 ## Project Status
 
@@ -38,6 +47,7 @@ This is a **documentation and planning repository**. The actual code is split ac
 
 ### Current Focus
 - [ ] Define technical architecture
+- [ ] Design mod API and system
 - [ ] Plan data conversion pipeline
 - [ ] Prototype basic 3D environment
 - [ ] Design networking infrastructure
