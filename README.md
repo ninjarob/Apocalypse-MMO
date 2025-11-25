@@ -54,11 +54,20 @@ This is a **documentation and planning repository**. The actual code is split ac
 
 ## Documentation
 
-See the `/docs` folder for detailed documentation:
-- Architecture decisions
-- Design documents
-- Development roadmap
-- API specifications
+See the `/docs` folder for comprehensive documentation:
+
+### Core Documentation
+- **[Architecture](./docs/ARCHITECTURE.md)** - System design and technical architecture
+- **[Roadmap](./docs/ROADMAP.md)** - Development phases and timeline
+- **[Moddability](./docs/MODDABILITY.md)** - Mod system design and API
+- **[MUD Conversion](./docs/MUD_CONVERSION.md)** - Strategy for converting text to 3D
+
+### Development Guides
+- **[AI Dev Guide](./docs/AI_DEV_GUIDE.md)** - Context for AI assistants
+- **[Coding Standards](./docs/CODING_STANDARDS.md)** - TypeScript style guide
+- **[Glossary](./docs/GLOSSARY.md)** - Project terminology reference
+- **[Unreal Getting Started](./docs/UNREAL_GETTING_STARTED.md)** - Learn Unreal Engine 5
+- **[Setup Complete](./docs/SETUP_COMPLETE.md)** - Repository overview and quick start
 
 ## Contributing
 
