@@ -7,10 +7,10 @@ The Apocalypse MMO is built as a distributed system with clear separation betwee
 ## High-Level Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    Apocalypse MMO System                     │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
+┌────────────────────────────────────────────────────────────┐
+│                    Apocalypse MMO System                   │
+├────────────────────────────────────────────────────────────┤
+│                                                            │
 │  ┌──────────────────┐              ┌──────────────────┐    │
 │  │  Unreal Client   │◄────────────►│  Game Server     │    │
 │  │  (UE5)           │   WebSocket  │  (Node.js/C++)   │    │
@@ -20,7 +20,7 @@ The Apocalypse MMO is built as a distributed system with clear separation betwee
 │  │  - Prediction    │              │  - Validation    │    │
 │  │  - UI/UX         │              │  - Persistence   │    │
 │  └──────────────────┘              └─────────┬────────┘    │
-│                                              │              │
+│                                              │             │
 │                                    ┌─────────▼────────┐    │
 │                                    │   Database       │    │
 │                                    │   (SQLite/PG)    │    │
@@ -29,8 +29,8 @@ The Apocalypse MMO is built as a distributed system with clear separation betwee
 │                                    │  - World State   │    │
 │                                    │  - Items         │    │
 │                                    └──────────────────┘    │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+│                                                            │
+└────────────────────────────────────────────────────────────┘
 ```
 
 ## Server Architecture
